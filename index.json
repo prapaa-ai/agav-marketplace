@@ -1,0 +1,131 @@
+{
+  "version": "1.0.0",
+  "agents": [
+    {
+      "name": "argocd",
+      "description": "Argo CD agent for GitOps deployment monitoring, application lifecycle management, and resource inspection",
+      "category": "devops",
+      "tags": ["argocd", "gitops", "kubernetes", "deployment"],
+      "version": "1.0.0",
+      "path": "agents/argocd",
+      "tool-count": 6,
+      "has-destructive-tools": true
+    },
+    {
+      "name": "aws",
+      "description": "AWS cloud agent for EC2, S3, EKS, VPC, STS, and Cost Explorer resource inspection and cost analysis",
+      "category": "cloud",
+      "tags": ["aws", "cloud", "ec2", "s3", "eks", "infrastructure"],
+      "version": "1.0.0",
+      "path": "agents/aws",
+      "tool-count": 7,
+      "has-destructive-tools": false
+    },
+    {
+      "name": "azure",
+      "description": "Azure cloud agent for VMs, storage accounts, resource groups, virtual networks, AKS, and cost analysis",
+      "category": "cloud",
+      "tags": ["azure", "cloud", "vm", "storage", "aks", "infrastructure"],
+      "version": "1.0.0",
+      "path": "agents/azure",
+      "tool-count": 7,
+      "has-destructive-tools": false
+    },
+    {
+      "name": "azuredevops",
+      "description": "Azure DevOps agent for pipeline management, builds, environments, variable groups, and delivery automation",
+      "category": "devops",
+      "tags": ["azure", "devops", "pipelines", "ci-cd", "builds"],
+      "version": "1.0.0",
+      "path": "agents/azuredevops",
+      "tool-count": 24,
+      "has-destructive-tools": true
+    },
+    {
+      "name": "browser-use",
+      "description": "Browser automation agent for web navigation, interaction, screenshots, and data extraction via Playwright",
+      "category": "automation",
+      "tags": ["browser", "automation", "web", "playwright", "scraping"],
+      "version": "1.0.0",
+      "path": "agents/browser-use",
+      "tool-count": 6,
+      "has-destructive-tools": true
+    },
+    {
+      "name": "gcp",
+      "description": "GCP cloud agent for Compute Engine, Cloud Storage, GKE clusters, billing accounts, and cost analysis",
+      "category": "cloud",
+      "tags": ["gcp", "google-cloud", "compute", "storage", "gke", "infrastructure"],
+      "version": "1.0.0",
+      "path": "agents/gcp",
+      "tool-count": 7,
+      "has-destructive-tools": false
+    },
+    {
+      "name": "gitlab",
+      "description": "GitLab agent for repositories, merge requests, branches, commits, file operations, groups, and user management",
+      "category": "code-review",
+      "tags": ["gitlab", "git", "merge-requests", "ci-cd", "repositories"],
+      "version": "1.0.0",
+      "path": "agents/gitlab",
+      "tool-count": 20,
+      "has-destructive-tools": true
+    },
+    {
+      "name": "jira",
+      "description": "Jira agent for issue tracking, project management, workflow automation, comments, and team collaboration",
+      "category": "project-management",
+      "tags": ["jira", "issue-tracking", "project-management", "workflow"],
+      "version": "1.0.0",
+      "path": "agents/jira",
+      "tool-count": 21,
+      "has-destructive-tools": true
+    },
+    {
+      "name": "kubectl",
+      "description": "Kubernetes cluster agent for inspecting pods, nodes, services, deployments, and logs via kubectl CLI",
+      "category": "infrastructure",
+      "tags": ["kubernetes", "k8s", "infrastructure", "devops", "containers"],
+      "version": "1.0.0",
+      "path": "agents/kubectl",
+      "tool-count": 7,
+      "has-destructive-tools": false
+    },
+    {
+      "name": "win-cua",
+      "description": "Windows Computer Use Agent for screen capture, mouse control, keyboard input, window management, and app launching via PowerShell",
+      "category": "automation",
+      "tags": ["windows", "automation", "computer-use", "desktop", "powershell"],
+      "version": "1.0.0",
+      "path": "agents/win-cua",
+      "tool-count": 13,
+      "has-destructive-tools": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "code-review",
+      "name": "Code Review"
+    },
+    {
+      "id": "project-management",
+      "name": "Project Management"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure"
+    },
+    {
+      "id": "automation",
+      "name": "Automation"
+    }
+  ]
+}
