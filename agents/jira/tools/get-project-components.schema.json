@@ -1,0 +1,17 @@
+{
+  "name": "jira_get_project_components",
+  "description": "Get all components defined in a Jira project. Components are used to categorize issues within a project.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_key": {
+        "type": "string",
+        "description": "The Jira project key (e.g., 'PROJ')"
+      }
+    },
+    "required": [
+      "project_key"
+    ]
+  }
+}

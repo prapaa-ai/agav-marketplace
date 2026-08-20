@@ -1,0 +1,25 @@
+{
+  "name": "jira_add_labels",
+  "description": "Add one or more labels to a Jira issue. Existing labels are preserved — only the new labels are appended.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels to add to the issue"
+      }
+    },
+    "required": [
+      "issue_key",
+      "labels"
+    ]
+  }
+}

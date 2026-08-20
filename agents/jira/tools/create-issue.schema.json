@@ -1,0 +1,46 @@
+{
+  "name": "jira_create_issue",
+  "description": "Create a new Jira issue in a specific project. Returns the created issue key.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_key": {
+        "type": "string",
+        "description": "The project key (e.g., 'PROJ')"
+      },
+      "summary": {
+        "type": "string",
+        "description": "Issue title/summary"
+      },
+      "issue_type": {
+        "type": "string",
+        "description": "Issue type (e.g., 'Bug', 'Story', 'Task')",
+        "default": "Task"
+      },
+      "description": {
+        "type": "string",
+        "description": "Issue description (optional)"
+      },
+      "priority": {
+        "type": "string",
+        "description": "Priority name (e.g., 'High', 'Medium', 'Low')"
+      },
+      "assignee": {
+        "type": "string",
+        "description": "Assignee email or account ID (optional)"
+      },
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Array of label strings (optional)"
+      }
+    },
+    "required": [
+      "project_key",
+      "summary"
+    ]
+  }
+}

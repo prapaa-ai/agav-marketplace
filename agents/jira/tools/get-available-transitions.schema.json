@@ -1,0 +1,17 @@
+{
+  "name": "jira_get_available_transitions",
+  "description": "Get all available workflow transitions for a Jira issue. Use this before transitioning an issue to find valid transition IDs and their target statuses.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

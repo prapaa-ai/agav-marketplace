@@ -1,0 +1,36 @@
+{
+  "name": "jira_update_issue",
+  "description": "Update one or more fields on an existing Jira issue (summary, description, priority, or labels). At least one field must be provided.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "summary": {
+        "type": "string",
+        "description": "New issue summary/title"
+      },
+      "description": {
+        "type": "string",
+        "description": "New issue description (plain text, will be converted to ADF)"
+      },
+      "priority": {
+        "type": "string",
+        "description": "New priority name (e.g., 'High', 'Medium', 'Low', 'Critical')"
+      },
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Replace the entire labels list with these labels"
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

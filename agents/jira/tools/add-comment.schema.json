@@ -1,0 +1,22 @@
+{
+  "name": "jira_add_comment",
+  "description": "Add a comment to a Jira issue. Can mention users using @email or @displayName.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "comment_body": {
+        "type": "string",
+        "description": "The comment text to add"
+      }
+    },
+    "required": [
+      "issue_key",
+      "comment_body"
+    ]
+  }
+}

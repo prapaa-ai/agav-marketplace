@@ -1,0 +1,22 @@
+{
+  "name": "jira_get_issue_comments",
+  "description": "Get all comments on a specific Jira issue. Returns each comment with author, date, and body text.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of comments to return (default: 20)",
+        "default": 20
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

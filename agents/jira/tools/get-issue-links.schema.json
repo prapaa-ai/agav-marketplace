@@ -1,0 +1,17 @@
+{
+  "name": "jira_get_issue_links",
+  "description": "Get all issue links (e.g., blocks, duplicates, relates to) for a specific Jira issue.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

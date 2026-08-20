@@ -1,0 +1,10 @@
+{
+  "name": "wincua_get_clipboard",
+  "description": "Get the current text content of the Windows clipboard.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "wincua_set_clipboard",
+  "description": "Set the Windows clipboard to the given text. Useful for pasting content into applications.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The text to place on the clipboard"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  }
+}

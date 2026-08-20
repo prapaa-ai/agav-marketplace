@@ -1,11 +1,14 @@
 ---
 name: win-cua
 description: Windows Computer Use Agent for screen capture, mouse control, keyboard input, window management, and app launching via PowerShell
-version: 1.0.0
+version: 1.1.0
 type: native
 required-config: []
 tools-dir: ./tools
 tags: [windows, automation, computer-use, desktop, powershell]
+prerequisites:
+  - "Windows OS (uses System.Windows.Forms and System.Drawing)"
+  - "PowerShell (built into Windows)"
 tool-permissions:
   wincua_get_screenshot: safe
   wincua_list_windows: safe

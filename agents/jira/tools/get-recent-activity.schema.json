@@ -1,0 +1,20 @@
+{
+  "name": "jira_get_recent_activity",
+  "description": "Get recently updated Jira issues across all accessible projects. Useful for a daily standup or project health check.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "type": "number",
+        "description": "How many days back to look (default: 7)",
+        "default": 7
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of issues to return (default: 20)",
+        "default": 20
+      }
+    }
+  }
+}

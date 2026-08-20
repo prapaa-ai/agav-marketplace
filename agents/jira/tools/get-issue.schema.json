@@ -1,0 +1,17 @@
+{
+  "name": "jira_get_issue",
+  "description": "Get detailed information about a specific Jira issue by its key (e.g., PROJ-123). Returns full details including description, comments, status, assignee, labels, etc.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

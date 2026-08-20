@@ -1,0 +1,17 @@
+{
+  "name": "wincua_run_powershell",
+  "description": "Execute an arbitrary PowerShell command or script and return its output. Use with caution — this runs commands directly on the host system. Output is truncated to 3000 characters.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "command": {
+        "type": "string",
+        "description": "PowerShell command or script block to execute"
+      }
+    },
+    "required": [
+      "command"
+    ]
+  }
+}

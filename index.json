@@ -76,7 +76,7 @@
       "description": "Jira agent for issue tracking, project management, workflow automation, comments, and team collaboration",
       "category": "project-management",
       "tags": ["jira", "issue-tracking", "project-management", "workflow"],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "agents/jira",
       "tool-count": 21,
       "has-destructive-tools": true
@@ -96,7 +96,7 @@
       "description": "Windows Computer Use Agent for screen capture, mouse control, keyboard input, window management, and app launching via PowerShell",
       "category": "automation",
       "tags": ["windows", "automation", "computer-use", "desktop", "powershell"],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "agents/win-cua",
       "tool-count": 13,
       "has-destructive-tools": true

@@ -1,0 +1,21 @@
+{
+  "name": "wincua_type_text",
+  "description": "Type text into the currently focused window using SendKeys. Special SendKeys characters (+, ^, %, ~, (, ), [, ], {, }) are automatically escaped so they type literally.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The text to type into the active window"
+      },
+      "delay_ms": {
+        "type": "number",
+        "description": "Delay in milliseconds between keystrokes (default: 0; note: SendKeys sends atomically, this adds a pre-send pause)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  }
+}

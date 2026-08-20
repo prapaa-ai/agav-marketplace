@@ -1,0 +1,15 @@
+{
+  "name": "wincua_get_screenshot",
+  "description": "Capture a screenshot of the primary screen and save it to a PNG file. Returns the saved file path.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "output_path": {
+        "type": "string",
+        "description": "Optional file path to save the screenshot (PNG). Defaults to a temp file."
+      }
+    },
+    "required": []
+  }
+}

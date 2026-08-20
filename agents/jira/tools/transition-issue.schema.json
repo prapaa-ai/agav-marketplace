@@ -1,0 +1,22 @@
+{
+  "name": "jira_transition_issue",
+  "description": "Move a Jira issue to a new workflow status using a transition ID. Use jira_get_available_transitions first to find valid transition IDs for the issue.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "transition_id": {
+        "type": "string",
+        "description": "The transition ID to apply. Use jira_get_available_transitions to find valid IDs."
+      }
+    },
+    "required": [
+      "issue_key",
+      "transition_id"
+    ]
+  }
+}

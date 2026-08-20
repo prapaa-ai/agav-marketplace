@@ -1,0 +1,15 @@
+{
+  "name": "wincua_list_windows",
+  "description": "List all visible windows (processes with a main window title). Optionally filter by title substring.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "filter": {
+        "type": "string",
+        "description": "Optional substring to filter window titles (case-insensitive)"
+      }
+    },
+    "required": []
+  }
+}

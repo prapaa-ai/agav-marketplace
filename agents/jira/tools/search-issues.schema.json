@@ -1,0 +1,22 @@
+{
+  "name": "jira_search_issues",
+  "description": "Search for Jira issues using JQL (Jira Query Language). Examples: 'project = PROJ AND status = Open', 'assignee = currentUser() AND priority = High', 'created >= -7d ORDER BY created DESC'",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "jql_query": {
+        "type": "string",
+        "description": "JQL query string to search for issues"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of results to return",
+        "default": 50
+      }
+    },
+    "required": [
+      "jql_query"
+    ]
+  }
+}

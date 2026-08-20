@@ -1,0 +1,27 @@
+{
+  "name": "jira_link_issues",
+  "description": "Create a directional link between two Jira issues. Common link types: 'blocks', 'is blocked by', 'clones', 'is cloned by', 'duplicates', 'relates to'.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "link_type": {
+        "type": "string",
+        "description": "The link type name (e.g., 'blocks', 'is blocked by', 'duplicates', 'relates to')"
+      },
+      "inward_issue_key": {
+        "type": "string",
+        "description": "The key of the inward issue (e.g., PROJ-100)"
+      },
+      "outward_issue_key": {
+        "type": "string",
+        "description": "The key of the outward issue (e.g., PROJ-200)"
+      }
+    },
+    "required": [
+      "link_type",
+      "inward_issue_key",
+      "outward_issue_key"
+    ]
+  }
+}

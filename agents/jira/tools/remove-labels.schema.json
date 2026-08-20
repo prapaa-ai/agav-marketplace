@@ -1,0 +1,25 @@
+{
+  "name": "jira_remove_labels",
+  "description": "Remove one or more labels from a Jira issue. Other existing labels are preserved.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels to remove from the issue"
+      }
+    },
+    "required": [
+      "issue_key",
+      "labels"
+    ]
+  }
+}

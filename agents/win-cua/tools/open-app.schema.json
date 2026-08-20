@@ -1,0 +1,25 @@
+{
+  "name": "wincua_open_app",
+  "description": "Launch an application or open a file. Supports executable names (notepad, calc), full paths, URLs (opens in default browser), and document paths.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "app": {
+        "type": "string",
+        "description": "Application name, executable path, file path, or URL to open"
+      },
+      "args": {
+        "type": "string",
+        "description": "Optional command-line arguments to pass to the application"
+      },
+      "wait": {
+        "type": "boolean",
+        "description": "Whether to wait for the application to exit before returning (default: false)"
+      }
+    },
+    "required": [
+      "app"
+    ]
+  }
+}

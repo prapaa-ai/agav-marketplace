@@ -1,0 +1,10 @@
+{
+  "name": "wincua_get_screen_size",
+  "description": "Get the primary screen dimensions and working area size.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

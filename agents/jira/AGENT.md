@@ -1,7 +1,7 @@
 ---
 name: jira
 description: Jira agent for issue tracking and project management via Jira REST API
-version: 1.0.0
+version: 1.1.0
 type: native
 required-config:
   - JIRA_URL

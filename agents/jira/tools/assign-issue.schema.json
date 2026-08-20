@@ -1,0 +1,21 @@
+{
+  "name": "jira_assign_issue",
+  "description": "Assign a Jira issue to a user by account ID, or unassign it. Use jira_search_users to find a user's account ID.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "account_id": {
+        "type": "string",
+        "description": "The account ID of the user to assign. If omitted or empty, the issue will be unassigned."
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

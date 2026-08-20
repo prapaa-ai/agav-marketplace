@@ -1,0 +1,15 @@
+{
+  "name": "jira_list_projects",
+  "description": "List all Jira projects accessible to the authenticated user. Returns project key, name, type, and category.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of projects to return (default: 50)",
+        "default": 50
+      }
+    }
+  }
+}

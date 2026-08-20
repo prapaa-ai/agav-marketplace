@@ -1,0 +1,19 @@
+{
+  "name": "wincua_focus_window",
+  "description": "Bring a window to the foreground by process ID or window title substring. Use list-windows first to find the correct PID or title.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pid": {
+        "type": "number",
+        "description": "Process ID of the window to focus"
+      },
+      "title": {
+        "type": "string",
+        "description": "Substring of the window title to focus (matches the first window found)"
+      }
+    },
+    "required": []
+  }
+}

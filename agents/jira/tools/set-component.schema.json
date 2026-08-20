@@ -1,0 +1,27 @@
+{
+  "name": "jira_set_component",
+  "description": "Set a component on a Jira issue by component name. The component must exist in the specified project. Use jira_get_project_components to list available components.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key (e.g., PROJ-123)"
+      },
+      "component_name": {
+        "type": "string",
+        "description": "Name of the component to set on the issue (case-sensitive)"
+      },
+      "project_key": {
+        "type": "string",
+        "description": "The project key — needed to look up the component ID (e.g., 'PROJ')"
+      }
+    },
+    "required": [
+      "issue_key",
+      "component_name",
+      "project_key"
+    ]
+  }
+}

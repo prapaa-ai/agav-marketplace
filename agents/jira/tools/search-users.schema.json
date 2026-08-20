@@ -1,0 +1,22 @@
+{
+  "name": "jira_search_users",
+  "description": "Search for Jira users by name or email address. Useful for finding account IDs needed to assign issues.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Name or email address to search for"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of results to return (default: 10)",
+        "default": 10
+      }
+    },
+    "required": [
+      "query"
+    ]
+  }
+}

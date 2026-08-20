@@ -1,0 +1,10 @@
+{
+  "name": "wincua_get_cursor_position",
+  "description": "Get the current mouse cursor position on screen.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "wincua_press_key",
+  "description": "Send a keystroke or key combination to the active window using SendKeys format. Examples: '{ENTER}', '{TAB}', '{ESC}', '^c' (Ctrl+C), '^v' (Ctrl+V), '%{F4}' (Alt+F4), '+{TAB}' (Shift+Tab), '{F5}', '{DELETE}', '{HOME}', '{END}'.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "key": {
+        "type": "string",
+        "description": "Key or key combination in SendKeys format. Use ^ for Ctrl, % for Alt, + for Shift. Wrap special key names in braces: {ENTER}, {TAB}, {ESC}, {F1}-{F12}, {DELETE}, {HOME}, {END}, {PGUP}, {PGDN}, {UP}, {DOWN}, {LEFT}, {RIGHT}."
+      }
+    },
+    "required": [
+      "key"
+    ]
+  }
+}

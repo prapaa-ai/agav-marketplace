@@ -1,0 +1,17 @@
+{
+  "name": "jira_delete_issue",
+  "description": "Permanently delete a Jira issue. This action cannot be undone. Requires appropriate project permissions.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "issue_key": {
+        "type": "string",
+        "description": "The Jira issue key to delete (e.g., PROJ-123)"
+      }
+    },
+    "required": [
+      "issue_key"
+    ]
+  }
+}

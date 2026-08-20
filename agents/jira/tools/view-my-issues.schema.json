@@ -1,0 +1,15 @@
+{
+  "name": "jira_view_my_issues",
+  "description": "View all Jira issues assigned to me (the authenticated user), ordered by most recently updated",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of issues to return",
+        "default": 50
+      }
+    }
+  }
+}
