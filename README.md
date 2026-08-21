@@ -46,11 +46,13 @@ agav agents install <marketplace-raw-url>/agents/win-cua --destination project
 
 ### 4. Configure credentials
 
-After installing, open the TUI and press `i` to inspect, then `e` to open the credential editor:
+After installing, open the TUI and press `c` to configure:
 
 ```
-/agents → [1] List → select agent → i → e
+/agents → [1] List → select agent → c
 ```
+
+Or inspect first, then edit: `i → e`.
 
 Enter the required API tokens and URLs. Values are encrypted at rest.
 
@@ -93,6 +95,7 @@ The `.gitignore` excludes agent directories from being committed. This is intent
       "tags": ["jira", "issue-tracking", "project-management", "workflow"],
       "version": "1.0.0",
       "path": "agents/jira",
+      "files": ["AGENT.md", "tools/get-issue.mjs", "tools/get-issue.schema.json", "..."],
       "tool-count": 21,
       "has-destructive-tools": true
     }
@@ -100,7 +103,17 @@ The `.gitignore` excludes agent directories from being committed. This is intent
 }
 ```
 
-All fields are required. `path` is the relative path from the repo root to the agent directory. `has-destructive-tools` is `true` if any tool is classified as `modifies` (creates, edits, or deletes data).
+All fields are required. `path` is the relative path from the repo root to the agent directory. `files` lists every file in the agent directory (relative to `path`) — required for HTTP-based marketplaces where directory listing is unavailable (e.g. `raw.githubusercontent.com`). `has-destructive-tools` is `true` if any tool is classified as `modifies` (creates, edits, or deletes data).
+
+## Maintaining the index
+
+Run the generate script after adding or modifying agents:
+
+```bash
+node scripts/generate-index.mjs
+```
+
+This walks `agents/*/`, reads each `AGENT.md` frontmatter, enumerates all files, and writes `index.json` with up-to-date metadata and `files` arrays. Always run this before committing changes to agents.
 
 ## AGENT.md format
 
@@ -181,7 +194,7 @@ export default {
 
 1. Create `agents/<your-agent>/` with `AGENT.md` and `tools/*.mjs`
 2. Add a `README.md` inside the agent directory documenting required credentials and tool descriptions
-3. Add an entry to `index.json`
+3. Run `node scripts/generate-index.mjs` to update `index.json`
 4. Open a pull request
 
 Agents are reviewed for: correct `tool-permissions` classification, credential handling (no hardcoded values), and meaningful tool descriptions that help the LLM choose the right tool.
