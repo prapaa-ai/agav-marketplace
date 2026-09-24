@@ -1,0 +1,21 @@
+{
+  "name": "jenkins_list_builds",
+  "description": "List recent builds for a Jenkins job with their status, duration, and timestamp",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Maximum number of builds to return (default: 10)"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

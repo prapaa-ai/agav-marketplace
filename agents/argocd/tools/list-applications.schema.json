@@ -1,0 +1,14 @@
+{
+  "name": "argocd_list_applications",
+  "description": "List all Argo CD applications with their sync and health status",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Filter by project name"
+      }
+    }
+  }
+}

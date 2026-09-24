@@ -1,0 +1,40 @@
+{
+  "name": "ado_create_yaml_pipeline",
+  "description": "Create a new YAML-based pipeline in Azure DevOps backed by a repository file",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Pipeline name"
+      },
+      "yaml_path": {
+        "type": "string",
+        "description": "Path to the YAML file in the repository (e.g. /azure-pipelines.yml)"
+      },
+      "repo_id": {
+        "type": "string",
+        "description": "Repository ID (GUID)"
+      },
+      "repo_name": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "folder": {
+        "type": "string",
+        "description": "Folder path for the pipeline (e.g. /MyTeam)"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "name",
+      "yaml_path",
+      "repo_id",
+      "repo_name"
+    ]
+  }
+}

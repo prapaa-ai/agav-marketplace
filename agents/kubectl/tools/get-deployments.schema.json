@@ -1,0 +1,18 @@
+{
+  "name": "kubectl_get_deployments",
+  "description": "List Kubernetes deployments with ready, up-to-date, and available replica counts",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "namespace": {
+        "type": "string",
+        "description": "Namespace to list deployments in (omit for default namespace)"
+      },
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      }
+    }
+  }
+}

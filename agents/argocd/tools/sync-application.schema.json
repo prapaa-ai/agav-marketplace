@@ -1,0 +1,27 @@
+{
+  "name": "argocd_sync_application",
+  "description": "Trigger a sync for an Argo CD application to reconcile it with the desired state",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Application name to sync"
+      },
+      "prune": {
+        "type": "boolean",
+        "description": "Prune resources that are no longer defined in Git",
+        "default": false
+      },
+      "dry_run": {
+        "type": "boolean",
+        "description": "Simulate the sync without applying changes",
+        "default": false
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

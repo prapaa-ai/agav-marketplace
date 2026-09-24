@@ -1,0 +1,37 @@
+{
+  "name": "gitlab_create_or_update_file",
+  "description": "Create or update a single file in a GitLab repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "file_path": {
+        "type": "string",
+        "description": "Path to the file within the repository"
+      },
+      "content": {
+        "type": "string",
+        "description": "File content (plain text)"
+      },
+      "commit_message": {
+        "type": "string",
+        "description": "Commit message"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Target branch (defaults to 'main')",
+        "default": "main"
+      }
+    },
+    "required": [
+      "project_id",
+      "file_path",
+      "content",
+      "commit_message"
+    ]
+  }
+}

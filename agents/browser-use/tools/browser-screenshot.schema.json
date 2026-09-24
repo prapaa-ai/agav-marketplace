@@ -1,0 +1,25 @@
+{
+  "name": "browser_screenshot",
+  "description": "Take a screenshot of a webpage and save it to a file. Returns the saved file path.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The full URL to screenshot (include https://)"
+      },
+      "selector": {
+        "type": "string",
+        "description": "Optional CSS selector to screenshot a specific element only"
+      },
+      "full_page": {
+        "type": "boolean",
+        "description": "Whether to take a full-page screenshot (default: false)"
+      }
+    },
+    "required": [
+      "url"
+    ]
+  }
+}

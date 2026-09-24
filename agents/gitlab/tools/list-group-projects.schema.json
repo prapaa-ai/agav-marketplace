@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_list_group_projects",
+  "description": "List projects belonging to a GitLab group",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "group_id": {
+        "type": "string",
+        "description": "Group ID (numeric) or full path (e.g. 'my-org/my-group')"
+      },
+      "per_page": {
+        "type": "number",
+        "description": "Number of results to return (defaults to 30)",
+        "default": 30
+      }
+    },
+    "required": [
+      "group_id"
+    ]
+  }
+}

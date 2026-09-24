@@ -1,0 +1,10 @@
+{
+  "name": "aws_get_month_to_date_cost",
+  "description": "Get the current month-to-date AWS total cost using Cost Explorer",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

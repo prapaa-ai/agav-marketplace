@@ -1,0 +1,17 @@
+{
+  "name": "gitlab_get_user",
+  "description": "Get a GitLab user's profile by numeric ID or username",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "description": "Numeric user ID or username string"
+      }
+    },
+    "required": [
+      "user_id"
+    ]
+  }
+}

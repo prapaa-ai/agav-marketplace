@@ -1,0 +1,24 @@
+{
+  "name": "ado_list_builds",
+  "description": "List recent builds in an Azure DevOps project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      },
+      "status_filter": {
+        "type": "string",
+        "description": "Filter by status: inProgress, completed, cancelling, postponed, notStarted, all",
+        "default": "all"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 15
+      }
+    }
+  }
+}

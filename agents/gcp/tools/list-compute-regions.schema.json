@@ -1,0 +1,10 @@
+{
+  "name": "gcp_list_compute_regions",
+  "description": "List all GCP Compute Engine regions with their status and zone count",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

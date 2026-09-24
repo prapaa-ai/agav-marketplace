@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_get_commit_diff",
+  "description": "Get the diff for a specific commit showing file changes",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "sha": {
+        "type": "string",
+        "description": "Full or short commit SHA"
+      }
+    },
+    "required": [
+      "project_id",
+      "sha"
+    ]
+  }
+}

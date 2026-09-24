@@ -1,0 +1,26 @@
+{
+  "name": "jenkins_get_build_log",
+  "description": "Get the console output log for a specific Jenkins build, optionally limited to the last N lines",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      },
+      "number": {
+        "type": "number",
+        "description": "Build number"
+      },
+      "tail_lines": {
+        "type": "number",
+        "description": "Number of lines to return from the end of the log (default: 100)"
+      }
+    },
+    "required": [
+      "name",
+      "number"
+    ]
+  }
+}

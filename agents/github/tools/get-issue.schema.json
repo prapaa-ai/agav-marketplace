@@ -1,0 +1,27 @@
+{
+  "name": "github_get_issue",
+  "description": "Get details of a specific GitHub issue",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "issue_number": {
+        "type": "number",
+        "description": "Issue number"
+      }
+    },
+    "required": [
+      "owner",
+      "repo",
+      "issue_number"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ado_get_build_timeline",
+  "description": "Get the timeline (stages, jobs, tasks) of a specific Azure DevOps build",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "build_id": {
+        "type": "number",
+        "description": "Build ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "build_id"
+    ]
+  }
+}

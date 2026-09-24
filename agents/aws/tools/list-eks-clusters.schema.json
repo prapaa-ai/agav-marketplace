@@ -1,0 +1,15 @@
+{
+  "name": "aws_list_eks_clusters",
+  "description": "List EKS clusters in an AWS region with their Kubernetes version, status, and endpoint",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "region": {
+        "type": "string",
+        "description": "AWS region override (defaults to AWS_REGION env var)"
+      }
+    },
+    "required": []
+  }
+}

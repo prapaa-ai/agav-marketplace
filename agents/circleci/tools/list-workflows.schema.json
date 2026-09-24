@@ -1,0 +1,17 @@
+{
+  "name": "circleci_list_workflows",
+  "description": "List workflows for a CircleCI pipeline",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "string",
+        "description": "Pipeline UUID"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

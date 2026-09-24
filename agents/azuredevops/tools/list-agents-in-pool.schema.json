@@ -1,0 +1,17 @@
+{
+  "name": "ado_list_agents_in_pool",
+  "description": "List agents registered in a specific Azure DevOps agent pool",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pool_id": {
+        "type": "number",
+        "description": "Agent pool ID (from ado_list_agent_pools)"
+      }
+    },
+    "required": [
+      "pool_id"
+    ]
+  }
+}

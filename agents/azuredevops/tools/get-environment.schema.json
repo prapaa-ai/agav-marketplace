@@ -1,0 +1,21 @@
+{
+  "name": "ado_get_environment",
+  "description": "Get details of a specific Azure DevOps deployment environment",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "environment_id": {
+        "type": "number",
+        "description": "Environment ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "environment_id"
+    ]
+  }
+}

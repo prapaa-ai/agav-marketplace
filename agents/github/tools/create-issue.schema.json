@@ -1,0 +1,45 @@
+{
+  "name": "github_create_issue",
+  "description": "Create a new issue in a GitHub repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "title": {
+        "type": "string",
+        "description": "Issue title"
+      },
+      "body": {
+        "type": "string",
+        "description": "Issue body/description (optional)"
+      },
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Label names to apply (optional)"
+      },
+      "assignees": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "GitHub usernames to assign (optional)"
+      }
+    },
+    "required": [
+      "owner",
+      "repo",
+      "title"
+    ]
+  }
+}

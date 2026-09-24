@@ -1,0 +1,43 @@
+{
+  "name": "browser_fill",
+  "description": "Navigate to a URL, fill in form fields, optionally submit the form, and return the resulting page state.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The full URL to navigate to (include https://)"
+      },
+      "fields": {
+        "type": "array",
+        "description": "List of form fields to fill",
+        "items": {
+          "type": "object",
+          "properties": {
+            "selector": {
+              "type": "string",
+              "description": "CSS selector for the input field"
+            },
+            "value": {
+              "type": "string",
+              "description": "Value to fill into the field"
+            }
+          },
+          "required": [
+            "selector",
+            "value"
+          ]
+        }
+      },
+      "submit_selector": {
+        "type": "string",
+        "description": "Optional CSS selector for the submit button to click after filling fields"
+      }
+    },
+    "required": [
+      "url",
+      "fields"
+    ]
+  }
+}

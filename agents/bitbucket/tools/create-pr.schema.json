@@ -1,0 +1,42 @@
+{
+  "name": "bitbucket_create_pr",
+  "description": "Create a new pull request in a Bitbucket repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      },
+      "title": {
+        "type": "string",
+        "description": "Pull request title"
+      },
+      "source_branch": {
+        "type": "string",
+        "description": "Source branch name"
+      },
+      "destination_branch": {
+        "type": "string",
+        "description": "Destination branch name (default: main)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Pull request description (optional)"
+      },
+      "reviewers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Bitbucket account UUIDs of reviewers (optional)"
+      }
+    },
+    "required": [
+      "repo",
+      "title",
+      "source_branch"
+    ]
+  }
+}

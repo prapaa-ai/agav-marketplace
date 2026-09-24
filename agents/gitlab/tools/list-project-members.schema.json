@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_list_project_members",
+  "description": "List members of a GitLab project with their access levels",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "per_page": {
+        "type": "number",
+        "description": "Number of results to return (defaults to 30)",
+        "default": 30
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}

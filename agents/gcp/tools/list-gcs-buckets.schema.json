@@ -1,0 +1,10 @@
+{
+  "name": "gcp_list_gcs_buckets",
+  "description": "List all Google Cloud Storage buckets in the GCP project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

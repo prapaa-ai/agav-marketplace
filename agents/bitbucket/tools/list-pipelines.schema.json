@@ -1,0 +1,21 @@
+{
+  "name": "bitbucket_list_pipelines",
+  "description": "List recent pipeline runs for a Bitbucket repository",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Number of pipelines to return (default: 10)"
+      }
+    },
+    "required": [
+      "repo"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ado_list_agent_pools",
+  "description": "List Azure DevOps agent pools at the organization level",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

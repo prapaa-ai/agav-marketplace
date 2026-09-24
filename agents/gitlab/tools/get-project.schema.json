@@ -1,0 +1,17 @@
+{
+  "name": "gitlab_get_project",
+  "description": "Get details of a GitLab project by ID or path",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project' or '123')"
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}

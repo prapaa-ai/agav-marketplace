@@ -1,0 +1,21 @@
+{
+  "name": "browser_observe",
+  "description": "Extract text content from a webpage. Optionally target a specific element with a CSS selector. Returns up to 5000 characters of visible text.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The full URL to extract content from (include https://)"
+      },
+      "selector": {
+        "type": "string",
+        "description": "Optional CSS selector to extract text from a specific element (returns all matching elements' text)"
+      }
+    },
+    "required": [
+      "url"
+    ]
+  }
+}

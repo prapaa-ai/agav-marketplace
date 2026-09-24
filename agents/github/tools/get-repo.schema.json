@@ -1,0 +1,22 @@
+{
+  "name": "github_get_repo",
+  "description": "Get details of a specific GitHub repository",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner (user or organization)"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      }
+    },
+    "required": [
+      "owner",
+      "repo"
+    ]
+  }
+}

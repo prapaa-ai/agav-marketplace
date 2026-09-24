@@ -1,0 +1,21 @@
+{
+  "name": "ado_get_pipeline",
+  "description": "Get details of a specific Azure DevOps pipeline",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

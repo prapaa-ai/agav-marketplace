@@ -1,0 +1,14 @@
+{
+  "name": "ado_list_service_connections",
+  "description": "List service connections (endpoints) in an Azure DevOps project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    }
+  }
+}

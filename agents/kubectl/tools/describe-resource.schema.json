@@ -1,0 +1,30 @@
+{
+  "name": "kubectl_describe_resource",
+  "description": "Describe a Kubernetes resource (pod, deployment, service, node, etc.) showing detailed state, events, and conditions",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "kind": {
+        "type": "string",
+        "description": "Resource kind (e.g. pod, deployment, service, node, configmap)"
+      },
+      "name": {
+        "type": "string",
+        "description": "Resource name"
+      },
+      "namespace": {
+        "type": "string",
+        "description": "Namespace (required for namespace-scoped resources)"
+      },
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      }
+    },
+    "required": [
+      "kind",
+      "name"
+    ]
+  }
+}

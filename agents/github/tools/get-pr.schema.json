@@ -1,0 +1,27 @@
+{
+  "name": "github_get_pr",
+  "description": "Get details of a specific GitHub pull request",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "pull_number": {
+        "type": "number",
+        "description": "Pull request number"
+      }
+    },
+    "required": [
+      "owner",
+      "repo",
+      "pull_number"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "gitlab_get_repository_tree",
+  "description": "List files and directories in a GitLab repository at a given path",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "path": {
+        "type": "string",
+        "description": "Directory path to list (defaults to root)",
+        "default": ""
+      },
+      "ref": {
+        "type": "string",
+        "description": "Branch, tag, or commit SHA (defaults to 'main')",
+        "default": "main"
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ado_list_pipeline_runs",
+  "description": "List recent runs for a specific Azure DevOps pipeline",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 10
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

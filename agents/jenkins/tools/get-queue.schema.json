@@ -1,0 +1,9 @@
+{
+  "name": "jenkins_get_queue",
+  "description": "Get the current Jenkins build queue showing pending and stuck items",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

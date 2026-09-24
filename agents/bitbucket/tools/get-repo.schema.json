@@ -1,0 +1,17 @@
+{
+  "name": "bitbucket_get_repo",
+  "description": "Get details of a specific Bitbucket repository",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      }
+    },
+    "required": [
+      "repo"
+    ]
+  }
+}

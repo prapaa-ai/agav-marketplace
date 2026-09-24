@@ -1,0 +1,29 @@
+{
+  "name": "ado_update_pipeline_metadata",
+  "description": "Update the name or folder of an existing Azure DevOps pipeline",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID to update"
+      },
+      "name": {
+        "type": "string",
+        "description": "New pipeline name (optional)"
+      },
+      "folder": {
+        "type": "string",
+        "description": "New folder path (optional)"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

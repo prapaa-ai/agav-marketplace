@@ -4,10 +4,22 @@ Community-built agents for [agav](https://github.com/prapaa-ai/agav), a terminal
 
 ## Available agents
 
-| Agent                      | Category           | Tools | Description                                                                             |
-| -------------------------- | ------------------ | ----- | --------------------------------------------------------------------------------------- |
-| [jira](agents/jira/)       | Project Management | 21    | Jira — issues, projects, transitions, comments, links, labels, assignments              |
-| [win-cua](agents/win-cua/) | Automation         | 13    | Windows desktop automation — mouse, keyboard, clipboard, screenshots, window management |
+| Agent | Category | Tools | Description |
+| ----- | -------- | ----- | ----------- |
+| [argocd](agents/argocd/) | DevOps | 6 | Argo CD agent for GitOps deployment monitoring and application lifecycle management |
+| [aws](agents/aws/) | Cloud | 7 | AWS cloud agent for EC2, S3, EKS, VPC, STS, and Cost Explorer resource inspection and cost analysis |
+| [azure](agents/azure/) | Cloud | 7 | Azure cloud agent for VMs, storage accounts, resource groups, virtual networks, AKS clusters, and cost/usage analysis |
+| [azuredevops](agents/azuredevops/) | DevOps | 24 | Azure DevOps agent for pipeline management, builds, and delivery automation via Azure DevOps REST API |
+| [bitbucket](agents/bitbucket/) | Code Review | 10 | Bitbucket Cloud agent for repository management, pull requests, branches, commits, and pipeline inspection via Bitbucket REST API |
+| [browser-use](agents/browser-use/) | Automation | 6 | Browser automation agent for web navigation, interaction, screenshots, and data extraction via Playwright |
+| [circleci](agents/circleci/) | DevOps | 7 | CircleCI agent for pipeline monitoring, workflow inspection, job status tracking, and pipeline triggering via CircleCI API |
+| [gcp](agents/gcp/) | Cloud | 7 | GCP cloud agent for Compute Engine, Cloud Storage, GKE clusters, billing accounts, and BigQuery billing exports |
+| [github](agents/github/) | Code Review | 10 | GitHub agent for repository management, PRs, and issues via GitHub API |
+| [gitlab](agents/gitlab/) | Code Review | 26 | GitLab agent for repository management, merge requests, and CI/CD pipelines via GitLab REST API |
+| [jenkins](agents/jenkins/) | DevOps | 8 | Jenkins CI/CD agent for job management, build monitoring, queue inspection, and build triggering via Jenkins REST API |
+| [jira](agents/jira/) | Project Management | 21 | Jira agent for issue tracking and project management via Jira REST API |
+| [kubectl](agents/kubectl/) | Infrastructure | 7 | Kubernetes cluster agent for inspecting pods, nodes, services, deployments, and logs via kubectl CLI |
+| [win-cua](agents/win-cua/) | Automation | 13 | Windows Computer Use Agent for screen capture, mouse control, keyboard input, window management, and app launching via PowerShell |
 
 ## Quick start
 

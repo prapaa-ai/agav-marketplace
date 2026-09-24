@@ -1,0 +1,30 @@
+{
+  "name": "github_list_prs",
+  "description": "List pull requests in a GitHub repository",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "state": {
+        "type": "string",
+        "description": "PR state: open, closed, or all (defaults to open)"
+      },
+      "per_page": {
+        "type": "number",
+        "description": "Number of results to return (defaults to 20)"
+      }
+    },
+    "required": [
+      "owner",
+      "repo"
+    ]
+  }
+}

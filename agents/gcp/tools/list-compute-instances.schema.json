@@ -1,0 +1,15 @@
+{
+  "name": "gcp_list_compute_instances",
+  "description": "List GCP Compute Engine VM instances across all zones or a specific zone",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "zone": {
+        "type": "string",
+        "description": "Specific zone to list instances from (e.g., us-central1-a). Omit to list all zones."
+      }
+    },
+    "required": []
+  }
+}

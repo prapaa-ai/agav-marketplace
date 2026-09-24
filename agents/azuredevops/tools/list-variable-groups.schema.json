@@ -1,0 +1,14 @@
+{
+  "name": "ado_list_variable_groups",
+  "description": "List variable groups in an Azure DevOps project (shows variable names but not values for security)",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    }
+  }
+}

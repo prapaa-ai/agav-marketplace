@@ -1,0 +1,27 @@
+{
+  "name": "gitlab_create_branch",
+  "description": "Create a new branch in a GitLab project",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Name for the new branch"
+      },
+      "ref": {
+        "type": "string",
+        "description": "Branch, tag, or commit to branch from"
+      }
+    },
+    "required": [
+      "project_id",
+      "branch",
+      "ref"
+    ]
+  }
+}

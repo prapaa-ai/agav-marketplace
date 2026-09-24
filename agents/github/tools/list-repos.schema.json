@@ -1,0 +1,20 @@
+{
+  "name": "github_list_repos",
+  "description": "List GitHub repositories for the authenticated user",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "description": "Type of repos: all, owner, member",
+        "default": "owner"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum number of repos to return",
+        "default": 30
+      }
+    }
+  }
+}

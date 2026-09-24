@@ -1,0 +1,14 @@
+{
+  "name": "kubectl_get_nodes",
+  "description": "List Kubernetes nodes with status, roles, version, and IP information",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      }
+    }
+  }
+}

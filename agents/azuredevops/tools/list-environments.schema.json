@@ -1,0 +1,14 @@
+{
+  "name": "ado_list_environments",
+  "description": "List deployment environments in an Azure DevOps project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    }
+  }
+}

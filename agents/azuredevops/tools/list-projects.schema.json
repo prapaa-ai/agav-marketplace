@@ -1,0 +1,15 @@
+{
+  "name": "ado_list_projects",
+  "description": "List all projects in the Azure DevOps organization",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 20
+      }
+    }
+  }
+}

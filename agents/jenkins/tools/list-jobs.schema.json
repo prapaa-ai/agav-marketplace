@@ -1,0 +1,14 @@
+{
+  "name": "jenkins_list_jobs",
+  "description": "List Jenkins jobs with their current status and last build info",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "folder": {
+        "type": "string",
+        "description": "Folder path to list jobs from (optional, lists root jobs if omitted)"
+      }
+    }
+  }
+}

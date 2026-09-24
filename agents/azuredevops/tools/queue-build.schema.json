@@ -1,0 +1,29 @@
+{
+  "name": "ado_queue_build",
+  "description": "Queue a new build for an Azure DevOps build definition",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "definition_id": {
+        "type": "number",
+        "description": "Build definition ID"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Branch to build (defaults to main)"
+      },
+      "parameters": {
+        "type": "object",
+        "description": "Optional build parameters as key-value pairs"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "definition_id"
+    ]
+  }
+}

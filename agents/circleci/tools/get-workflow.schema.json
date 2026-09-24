@@ -1,0 +1,17 @@
+{
+  "name": "circleci_get_workflow",
+  "description": "Get details of a specific CircleCI workflow by ID",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "workflow_id": {
+        "type": "string",
+        "description": "Workflow UUID"
+      }
+    },
+    "required": [
+      "workflow_id"
+    ]
+  }
+}

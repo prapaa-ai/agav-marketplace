@@ -1,0 +1,27 @@
+{
+  "name": "gitlab_list_commits",
+  "description": "List recent commits for a GitLab project branch",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Branch name (defaults to 'main')",
+        "default": "main"
+      },
+      "per_page": {
+        "type": "number",
+        "description": "Number of commits to return (defaults to 20)",
+        "default": 20
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}
