@@ -1,0 +1,34 @@
+{
+  "name": "ado_get_build_log",
+  "description": "Get the contents of a specific log for an Azure DevOps build",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "build_id": {
+        "type": "number",
+        "description": "Build ID"
+      },
+      "log_id": {
+        "type": "number",
+        "description": "Log ID (from ado_list_build_logs)"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      },
+      "start_line": {
+        "type": "number",
+        "description": "Start line number (1-based, optional)"
+      },
+      "end_line": {
+        "type": "number",
+        "description": "End line number (1-based, optional)"
+      }
+    },
+    "required": [
+      "build_id",
+      "log_id"
+    ]
+  }
+}

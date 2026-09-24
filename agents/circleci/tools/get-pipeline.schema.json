@@ -1,0 +1,17 @@
+{
+  "name": "circleci_get_pipeline",
+  "description": "Get details of a specific CircleCI pipeline by ID",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "string",
+        "description": "Pipeline UUID"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

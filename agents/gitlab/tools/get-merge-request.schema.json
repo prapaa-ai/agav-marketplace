@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_get_merge_request",
+  "description": "Get details of a specific merge request including description and changes",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "mr_iid": {
+        "type": "number",
+        "description": "Merge request internal ID (the !N number)"
+      }
+    },
+    "required": [
+      "project_id",
+      "mr_iid"
+    ]
+  }
+}

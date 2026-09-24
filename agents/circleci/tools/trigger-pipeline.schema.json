@@ -1,0 +1,26 @@
+{
+  "name": "circleci_trigger_pipeline",
+  "description": "Trigger a new pipeline for a CircleCI project",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_slug": {
+        "type": "string",
+        "description": "Project slug e.g. 'gh/org-name/repo-name'"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Branch to build (default: project default branch)"
+      },
+      "parameters": {
+        "type": "object",
+        "description": "Pipeline parameters as key-value pairs (optional)",
+        "additionalProperties": true
+      }
+    },
+    "required": [
+      "project_slug"
+    ]
+  }
+}

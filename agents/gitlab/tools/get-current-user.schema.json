@@ -1,0 +1,9 @@
+{
+  "name": "gitlab_get_current_user",
+  "description": "Get the profile of the currently authenticated GitLab user",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

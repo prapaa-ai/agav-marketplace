@@ -1,0 +1,21 @@
+{
+  "name": "ado_list_build_logs",
+  "description": "List the logs available for a specific Azure DevOps build",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "build_id": {
+        "type": "number",
+        "description": "Build ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "build_id"
+    ]
+  }
+}

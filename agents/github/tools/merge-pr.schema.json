@@ -1,0 +1,44 @@
+{
+  "name": "github_merge_pr",
+  "description": "Merge a pull request in a GitHub repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "pull_number": {
+        "type": "number",
+        "description": "Pull request number"
+      },
+      "merge_method": {
+        "type": "string",
+        "enum": [
+          "merge",
+          "squash",
+          "rebase"
+        ],
+        "description": "Merge method (default: merge)"
+      },
+      "commit_title": {
+        "type": "string",
+        "description": "Custom merge commit title (optional)"
+      },
+      "commit_message": {
+        "type": "string",
+        "description": "Custom merge commit message (optional)"
+      }
+    },
+    "required": [
+      "owner",
+      "repo",
+      "pull_number"
+    ]
+  }
+}

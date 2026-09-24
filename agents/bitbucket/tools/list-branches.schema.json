@@ -1,0 +1,25 @@
+{
+  "name": "bitbucket_list_branches",
+  "description": "List branches in a Bitbucket repository",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      },
+      "query": {
+        "type": "string",
+        "description": "Filter branches by name (optional)"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Results per page (default: 25)"
+      }
+    },
+    "required": [
+      "repo"
+    ]
+  }
+}

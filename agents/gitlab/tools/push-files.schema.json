@@ -1,0 +1,53 @@
+{
+  "name": "gitlab_push_files",
+  "description": "Push multiple file changes to a GitLab repository in a single commit",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Target branch name"
+      },
+      "commit_message": {
+        "type": "string",
+        "description": "Commit message"
+      },
+      "files": {
+        "type": "array",
+        "description": "Files to push",
+        "items": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "description": "One of: create, update, delete"
+            },
+            "file_path": {
+              "type": "string",
+              "description": "Path to the file within the repository"
+            },
+            "content": {
+              "type": "string",
+              "description": "File content (required for create/update)"
+            }
+          },
+          "required": [
+            "action",
+            "file_path"
+          ]
+        }
+      }
+    },
+    "required": [
+      "project_id",
+      "branch",
+      "commit_message",
+      "files"
+    ]
+  }
+}

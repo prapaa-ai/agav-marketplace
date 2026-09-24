@@ -1,0 +1,22 @@
+{
+  "name": "bitbucket_list_pr_comments",
+  "description": "List comments on a Bitbucket pull request",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      },
+      "pr_id": {
+        "type": "number",
+        "description": "Pull request ID"
+      }
+    },
+    "required": [
+      "repo",
+      "pr_id"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "argocd_list_clusters",
+  "description": "List all clusters registered in Argo CD",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

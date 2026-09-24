@@ -1,0 +1,27 @@
+{
+  "name": "gitlab_merge_mr",
+  "description": "Merge an open merge request",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "mr_iid": {
+        "type": "number",
+        "description": "Merge request internal ID (the !N number)"
+      },
+      "remove_source_branch": {
+        "type": "boolean",
+        "description": "Delete source branch after merge (defaults to false)",
+        "default": false
+      }
+    },
+    "required": [
+      "project_id",
+      "mr_iid"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ado_get_pipeline_run",
+  "description": "Get details of a specific Azure DevOps pipeline run",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID"
+      },
+      "run_id": {
+        "type": "number",
+        "description": "Run ID"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "pipeline_id",
+      "run_id"
+    ]
+  }
+}

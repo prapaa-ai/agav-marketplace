@@ -1,0 +1,26 @@
+{
+  "name": "gitlab_list_branches",
+  "description": "List branches for a GitLab project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "search": {
+        "type": "string",
+        "description": "Filter branches by name"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 20
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}

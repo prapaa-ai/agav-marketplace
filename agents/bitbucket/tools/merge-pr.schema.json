@@ -1,0 +1,35 @@
+{
+  "name": "bitbucket_merge_pr",
+  "description": "Merge a pull request in a Bitbucket repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "repo": {
+        "type": "string",
+        "description": "Repository slug"
+      },
+      "pr_id": {
+        "type": "number",
+        "description": "Pull request ID"
+      },
+      "merge_strategy": {
+        "type": "string",
+        "enum": [
+          "merge_commit",
+          "squash",
+          "fast_forward"
+        ],
+        "description": "Merge strategy (default: merge_commit)"
+      },
+      "close_source_branch": {
+        "type": "boolean",
+        "description": "Delete the source branch after merge (default: false)"
+      }
+    },
+    "required": [
+      "repo",
+      "pr_id"
+    ]
+  }
+}

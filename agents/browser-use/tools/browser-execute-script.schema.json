@@ -1,0 +1,22 @@
+{
+  "name": "browser_execute_script",
+  "description": "Navigate to a URL and execute a JavaScript expression in the page context. Returns the serialized result of the expression.",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The full URL to navigate to (include https://)"
+      },
+      "script": {
+        "type": "string",
+        "description": "JavaScript expression to evaluate in the page context (e.g. 'document.title' or 'document.querySelectorAll(\"a\").length')"
+      }
+    },
+    "required": [
+      "url",
+      "script"
+    ]
+  }
+}

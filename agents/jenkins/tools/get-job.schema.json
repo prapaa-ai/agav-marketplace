@@ -1,0 +1,17 @@
+{
+  "name": "jenkins_get_job",
+  "description": "Get detailed information about a specific Jenkins job including health, build history, and configuration",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

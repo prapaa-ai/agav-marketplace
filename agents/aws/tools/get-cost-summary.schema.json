@@ -1,0 +1,26 @@
+{
+  "name": "aws_get_cost_summary",
+  "description": "Get AWS cost summary for a date range, grouped by SERVICE, ACCOUNT, or REGION using Cost Explorer",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "Start date in YYYY-MM-DD format (inclusive)"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "End date in YYYY-MM-DD format (exclusive)"
+      },
+      "group_by": {
+        "type": "string",
+        "description": "Dimension to group by: SERVICE, LINKED_ACCOUNT, or REGION (default: SERVICE)"
+      }
+    },
+    "required": [
+      "start_date",
+      "end_date"
+    ]
+  }
+}

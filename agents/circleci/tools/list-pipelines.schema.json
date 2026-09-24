@@ -1,0 +1,25 @@
+{
+  "name": "circleci_list_pipelines",
+  "description": "List recent pipelines for a CircleCI project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_slug": {
+        "type": "string",
+        "description": "Project slug e.g. 'gh/org-name/repo-name'"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Filter by branch name (optional)"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Number of pipelines to return (default: 10)"
+      }
+    },
+    "required": [
+      "project_slug"
+    ]
+  }
+}

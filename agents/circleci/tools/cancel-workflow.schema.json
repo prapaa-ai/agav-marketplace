@@ -1,0 +1,17 @@
+{
+  "name": "circleci_cancel_workflow",
+  "description": "Cancel a running CircleCI workflow",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "workflow_id": {
+        "type": "string",
+        "description": "Workflow UUID to cancel"
+      }
+    },
+    "required": [
+      "workflow_id"
+    ]
+  }
+}

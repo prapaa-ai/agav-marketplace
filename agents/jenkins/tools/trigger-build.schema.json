@@ -1,0 +1,21 @@
+{
+  "name": "jenkins_trigger_build",
+  "description": "Trigger a new build for a Jenkins job, optionally with parameters",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      },
+      "parameters": {
+        "type": "object",
+        "description": "Build parameters as key-value pairs (optional)"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

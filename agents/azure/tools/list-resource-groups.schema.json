@@ -1,0 +1,10 @@
+{
+  "name": "azure_list_resource_groups",
+  "description": "List all Azure resource groups in the subscription with their location and provisioning state",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gcp_list_gke_clusters",
+  "description": "List all GKE (Google Kubernetes Engine) clusters in the GCP project across all locations",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

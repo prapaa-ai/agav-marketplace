@@ -1,0 +1,24 @@
+{
+  "name": "gitlab_list_projects",
+  "description": "List GitLab projects accessible to the authenticated user",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "search": {
+        "type": "string",
+        "description": "Filter projects by name"
+      },
+      "membership": {
+        "type": "boolean",
+        "description": "Only return projects the user is a member of",
+        "default": true
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 20
+      }
+    }
+  }
+}

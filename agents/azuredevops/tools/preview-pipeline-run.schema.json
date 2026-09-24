@@ -1,0 +1,25 @@
+{
+  "name": "ado_preview_pipeline_run",
+  "description": "Preview the final compiled YAML of an Azure DevOps pipeline without executing it",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID to preview"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Branch to preview against (defaults to main)"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "gitlab_get_group",
+  "description": "Get details of a GitLab group by ID or full path",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "group_id": {
+        "type": "string",
+        "description": "Group ID (numeric) or full path (e.g. 'my-org/my-group')"
+      }
+    },
+    "required": [
+      "group_id"
+    ]
+  }
+}

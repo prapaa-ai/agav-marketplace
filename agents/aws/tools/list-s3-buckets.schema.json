@@ -1,0 +1,10 @@
+{
+  "name": "aws_list_s3_buckets",
+  "description": "List all S3 buckets in the AWS account with their creation dates",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

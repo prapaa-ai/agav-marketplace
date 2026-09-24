@@ -1,0 +1,21 @@
+{
+  "name": "browser_navigate",
+  "description": "Navigate to a URL and return the page title and final URL. Use full URLs including https://.",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The full URL to navigate to (include https://)"
+      },
+      "wait_for": {
+        "type": "string",
+        "description": "Optional CSS selector to wait for before returning"
+      }
+    },
+    "required": [
+      "url"
+    ]
+  }
+}

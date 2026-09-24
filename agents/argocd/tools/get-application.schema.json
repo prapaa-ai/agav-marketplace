@@ -1,0 +1,17 @@
+{
+  "name": "argocd_get_application",
+  "description": "Get detailed status of a specific Argo CD application",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Application name"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

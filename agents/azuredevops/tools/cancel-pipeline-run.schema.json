@@ -1,0 +1,26 @@
+{
+  "name": "ado_cancel_pipeline_run",
+  "description": "Cancel a running Azure DevOps pipeline run",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID"
+      },
+      "run_id": {
+        "type": "number",
+        "description": "Run ID to cancel"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      }
+    },
+    "required": [
+      "pipeline_id",
+      "run_id"
+    ]
+  }
+}

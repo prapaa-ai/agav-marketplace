@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_get_mr_discussions",
+  "description": "Get discussion threads and comments on a merge request",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "mr_iid": {
+        "type": "number",
+        "description": "Merge request internal ID (the !N number)"
+      }
+    },
+    "required": [
+      "project_id",
+      "mr_iid"
+    ]
+  }
+}

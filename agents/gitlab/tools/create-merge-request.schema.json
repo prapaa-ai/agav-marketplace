@@ -1,0 +1,36 @@
+{
+  "name": "gitlab_create_merge_request",
+  "description": "Create a new merge request in a GitLab project",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "source_branch": {
+        "type": "string",
+        "description": "Branch to merge from"
+      },
+      "target_branch": {
+        "type": "string",
+        "description": "Branch to merge into"
+      },
+      "title": {
+        "type": "string",
+        "description": "Merge request title"
+      },
+      "description": {
+        "type": "string",
+        "description": "Merge request description"
+      }
+    },
+    "required": [
+      "project_id",
+      "source_branch",
+      "target_branch",
+      "title"
+    ]
+  }
+}

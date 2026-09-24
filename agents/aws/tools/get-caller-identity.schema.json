@@ -1,0 +1,10 @@
+{
+  "name": "aws_get_caller_identity",
+  "description": "Get the AWS identity (account, userId, ARN) for the configured IAM credentials using STS GetCallerIdentity",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

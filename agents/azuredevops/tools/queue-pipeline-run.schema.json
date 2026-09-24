@@ -1,0 +1,25 @@
+{
+  "name": "ado_queue_pipeline_run",
+  "description": "Queue a new run for an Azure DevOps pipeline",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pipeline_id": {
+        "type": "number",
+        "description": "Pipeline ID to queue"
+      },
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      },
+      "branch": {
+        "type": "string",
+        "description": "Branch to run pipeline on (defaults to pipeline default)"
+      }
+    },
+    "required": [
+      "pipeline_id"
+    ]
+  }
+}

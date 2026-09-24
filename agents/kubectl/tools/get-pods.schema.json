@@ -1,0 +1,22 @@
+{
+  "name": "kubectl_get_pods",
+  "description": "List Kubernetes pods in a namespace or across all namespaces",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "namespace": {
+        "type": "string",
+        "description": "Namespace to list pods in (omit for default namespace)"
+      },
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      },
+      "all_namespaces": {
+        "type": "boolean",
+        "description": "List pods across all namespaces"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "bitbucket_list_repos",
+  "description": "List repositories in the configured Bitbucket workspace",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "number",
+        "description": "Page number (default: 1)"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Results per page (default: 25, max: 100)"
+      }
+    },
+    "required": []
+  }
+}

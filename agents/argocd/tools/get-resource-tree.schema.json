@@ -1,0 +1,17 @@
+{
+  "name": "argocd_get_resource_tree",
+  "description": "Get the resource tree of an Argo CD application showing all managed Kubernetes resources with health and sync status",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "app_name": {
+        "type": "string",
+        "description": "Application name"
+      }
+    },
+    "required": [
+      "app_name"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "kubectl_get_namespaces",
+  "description": "List all Kubernetes namespaces with their status and age",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      }
+    }
+  }
+}

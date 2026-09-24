@@ -1,0 +1,22 @@
+{
+  "name": "jenkins_stop_build",
+  "description": "Stop a currently running Jenkins build",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      },
+      "number": {
+        "type": "number",
+        "description": "Build number to stop"
+      }
+    },
+    "required": [
+      "name",
+      "number"
+    ]
+  }
+}

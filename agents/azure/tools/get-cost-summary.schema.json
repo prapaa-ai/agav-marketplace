@@ -1,0 +1,26 @@
+{
+  "name": "azure_get_cost_summary",
+  "description": "Get Azure cost summary for a date range using Cost Management, grouped by ResourceGroup, ServiceName, or other dimensions",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "Start date in YYYY-MM-DD format"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "End date in YYYY-MM-DD format"
+      },
+      "group_by": {
+        "type": "string",
+        "description": "Dimension to group by: ResourceGroup, ServiceName, ResourceType, Location (default: ResourceGroup)"
+      }
+    },
+    "required": [
+      "start_date",
+      "end_date"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gcp_list_billing_accounts",
+  "description": "List GCP billing accounts accessible to the service account",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

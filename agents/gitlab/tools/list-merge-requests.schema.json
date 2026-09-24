@@ -1,0 +1,27 @@
+{
+  "name": "gitlab_list_merge_requests",
+  "description": "List merge requests for a GitLab project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "state": {
+        "type": "string",
+        "description": "Filter by state: opened, closed, merged, all",
+        "default": "opened"
+      },
+      "max_results": {
+        "type": "number",
+        "description": "Maximum results to return",
+        "default": 20
+      }
+    },
+    "required": [
+      "project_id"
+    ]
+  }
+}

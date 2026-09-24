@@ -1,0 +1,18 @@
+{
+  "name": "ado_list_build_definitions",
+  "description": "List build definitions in an Azure DevOps project",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project name (defaults to ADO_PROJECT env var)"
+      },
+      "top": {
+        "type": "number",
+        "description": "Maximum number of definitions to return (defaults to 50)"
+      }
+    }
+  }
+}

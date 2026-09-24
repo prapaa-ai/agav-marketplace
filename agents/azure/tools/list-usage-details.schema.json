@@ -1,0 +1,26 @@
+{
+  "name": "azure_list_usage_details",
+  "description": "List Azure consumption usage details for a date range — shows per-resource cost line items",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "Start date in YYYY-MM-DD format"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "End date in YYYY-MM-DD format"
+      },
+      "top": {
+        "type": "number",
+        "description": "Maximum number of records to return (default: 20)"
+      }
+    },
+    "required": [
+      "start_date",
+      "end_date"
+    ]
+  }
+}

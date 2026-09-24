@@ -1,0 +1,15 @@
+{
+  "name": "azure_list_storage_accounts",
+  "description": "List Azure Storage Accounts in the subscription, optionally scoped by resource group",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "resource_group": {
+        "type": "string",
+        "description": "Scope listing to a specific resource group name"
+      }
+    },
+    "required": []
+  }
+}

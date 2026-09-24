@@ -1,0 +1,15 @@
+{
+  "name": "aws_list_vpcs",
+  "description": "List VPCs in an AWS region with their CIDR blocks, state, and Name tags",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "region": {
+        "type": "string",
+        "description": "AWS region override (defaults to AWS_REGION env var)"
+      }
+    },
+    "required": []
+  }
+}

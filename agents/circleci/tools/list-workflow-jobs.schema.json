@@ -1,0 +1,17 @@
+{
+  "name": "circleci_list_workflow_jobs",
+  "description": "List jobs in a CircleCI workflow",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "workflow_id": {
+        "type": "string",
+        "description": "Workflow UUID"
+      }
+    },
+    "required": [
+      "workflow_id"
+    ]
+  }
+}

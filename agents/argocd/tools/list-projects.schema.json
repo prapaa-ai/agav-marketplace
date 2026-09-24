@@ -1,0 +1,9 @@
+{
+  "name": "argocd_list_projects",
+  "description": "List all Argo CD projects",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

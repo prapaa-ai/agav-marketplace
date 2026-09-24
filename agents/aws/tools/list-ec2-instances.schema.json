@@ -1,0 +1,19 @@
+{
+  "name": "aws_list_ec2_instances",
+  "description": "List EC2 instances in an AWS region with their state, type, and IP addresses",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "region": {
+        "type": "string",
+        "description": "AWS region override (defaults to AWS_REGION env var)"
+      },
+      "state": {
+        "type": "string",
+        "description": "Filter by instance state: running, stopped, pending, terminated, etc."
+      }
+    },
+    "required": []
+  }
+}

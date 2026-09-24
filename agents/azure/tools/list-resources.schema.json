@@ -1,0 +1,19 @@
+{
+  "name": "azure_list_resources",
+  "description": "List Azure resources in the subscription, optionally scoped by resource group or filtered by resource type",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "resource_group": {
+        "type": "string",
+        "description": "Scope listing to a specific resource group name"
+      },
+      "resource_type": {
+        "type": "string",
+        "description": "Filter by resource type, e.g. Microsoft.Compute/virtualMachines"
+      }
+    },
+    "required": []
+  }
+}

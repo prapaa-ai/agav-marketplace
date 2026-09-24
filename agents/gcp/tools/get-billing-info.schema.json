@@ -1,0 +1,10 @@
+{
+  "name": "gcp_get_billing_info",
+  "description": "Get the billing information for the GCP project — billing account name and whether billing is enabled",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

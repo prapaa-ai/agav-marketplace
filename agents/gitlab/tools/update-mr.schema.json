@@ -1,0 +1,38 @@
+{
+  "name": "gitlab_update_mr",
+  "description": "Update fields of an existing merge request (title, description, assignee, target branch)",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string",
+        "description": "Project ID or path (e.g. 'group/project')"
+      },
+      "mr_iid": {
+        "type": "number",
+        "description": "Merge request internal ID (the !N number)"
+      },
+      "title": {
+        "type": "string",
+        "description": "New title"
+      },
+      "description": {
+        "type": "string",
+        "description": "New description"
+      },
+      "assignee_id": {
+        "type": "number",
+        "description": "User ID of the new assignee"
+      },
+      "target_branch": {
+        "type": "string",
+        "description": "New target branch"
+      }
+    },
+    "required": [
+      "project_id",
+      "mr_iid"
+    ]
+  }
+}

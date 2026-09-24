@@ -1,0 +1,17 @@
+{
+  "name": "gitlab_list_subgroups",
+  "description": "List subgroups of a GitLab group",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "group_id": {
+        "type": "string",
+        "description": "Parent group ID (numeric) or full path"
+      }
+    },
+    "required": [
+      "group_id"
+    ]
+  }
+}

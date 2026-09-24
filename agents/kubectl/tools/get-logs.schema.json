@@ -1,0 +1,33 @@
+{
+  "name": "kubectl_get_logs",
+  "description": "Fetch logs from a Kubernetes pod, optionally filtered by container",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "pod": {
+        "type": "string",
+        "description": "Pod name"
+      },
+      "namespace": {
+        "type": "string",
+        "description": "Namespace the pod is in"
+      },
+      "container": {
+        "type": "string",
+        "description": "Container name (required for multi-container pods)"
+      },
+      "tail_lines": {
+        "type": "number",
+        "description": "Number of lines to tail from the end of the log (default: 50)"
+      },
+      "context": {
+        "type": "string",
+        "description": "Kubectl context (cluster) to use"
+      }
+    },
+    "required": [
+      "pod"
+    ]
+  }
+}

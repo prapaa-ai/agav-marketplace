@@ -1,0 +1,45 @@
+{
+  "name": "github_create_pr",
+  "description": "Create a new pull request in a GitHub repository",
+  "destructive": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Repository owner"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name"
+      },
+      "title": {
+        "type": "string",
+        "description": "Pull request title"
+      },
+      "head": {
+        "type": "string",
+        "description": "Branch containing changes (e.g. 'feature-branch')"
+      },
+      "base": {
+        "type": "string",
+        "description": "Branch to merge into (e.g. 'main')"
+      },
+      "body": {
+        "type": "string",
+        "description": "Pull request description (optional)"
+      },
+      "draft": {
+        "type": "boolean",
+        "description": "Create as draft PR (optional, default false)"
+      }
+    },
+    "required": [
+      "owner",
+      "repo",
+      "title",
+      "head",
+      "base"
+    ]
+  }
+}

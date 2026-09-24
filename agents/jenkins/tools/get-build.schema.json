@@ -1,0 +1,22 @@
+{
+  "name": "jenkins_get_build",
+  "description": "Get detailed information about a specific Jenkins build including result, duration, changes, and parameters",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Job name or path (e.g. 'my-folder/my-job')"
+      },
+      "number": {
+        "type": "number",
+        "description": "Build number"
+      }
+    },
+    "required": [
+      "name",
+      "number"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "gitlab_list_groups",
+  "description": "List GitLab groups accessible to the authenticated user",
+  "destructive": false,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "search": {
+        "type": "string",
+        "description": "Filter groups by name"
+      },
+      "per_page": {
+        "type": "number",
+        "description": "Number of results to return (defaults to 30)",
+        "default": 30
+      }
+    }
+  }
+}
